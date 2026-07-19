@@ -336,11 +336,10 @@ body::after {
   to { opacity: 1; transform: translateY(0); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .page-head, .layout > * { animation: rise .6s ease both; }
-  main section { animation: rise .6s ease both; }
-  main section:nth-child(1) { animation-delay: .05s; }
-  main section:nth-child(2) { animation-delay: .12s; }
-  main section:nth-child(3) { animation-delay: .18s; }
+  .page-head, .layout > * { animation: rise .35s ease both; }
+  main section { animation: rise .35s ease both; }
+  main section:nth-child(2) { animation-delay: .06s; }
+  main section:nth-child(3) { animation-delay: .1s; }
 }
 
 /* accessible focus states */

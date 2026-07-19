@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing — Suvo Dev</title>
+  <meta name="description" content="Transparent website and web app pricing packages from Suvo Dev — starter sites, business builds, and custom full-stack projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .plan { display: flex; flex-direction: column; padding: 30px 28px; }
+    .plan .name { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; color: var(--accent); letter-spacing: .06em; margin-bottom: 10px; }
+    .plan .price { font-family: "JetBrains Mono", Consolas, monospace; font-size: 32px; font-weight: 700; color: #fff; }
+    .plan .price small { font-size: 13px; color: var(--faint); font-weight: 400; }
+    .plan .for { font-size: 13px; color: var(--muted); margin: 6px 0 16px; }
+    .plan .checks { flex: 1; margin-bottom: 22px; }
+    .plan .btn { text-align: center; }
+    .plan.featured { border-color: var(--accent-strong); box-shadow: 0 0 0 1px var(--accent-strong), 0 14px 40px var(--glow); position: relative; }
+    .plan.featured .badge {
+      position: absolute; top: -12px; right: 22px;
+      font-family: "JetBrains Mono", Consolas, monospace; font-size: 11px; font-weight: 600;
+      background: var(--accent-strong); color: #fff; padding: 4px 12px; border-radius: 999px;
+    }
+    .note { text-align: center; color: var(--faint); font-size: 13px; margin-top: 18px; }
+    .cta-center { text-align: center; justify-content: center; flex-direction: column; padding: 56px 40px; }
+    .cta-center p { margin: 0 auto 22px; }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-hire"><span class="p">$</span>Hire Me<span class="ar">→</span></a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <p class="label">Pricing</p>
+      <h1>Simple, honest <span>pricing</span></h1>
+      <p>No hidden fees, no surprises. Pick a package or tell me what you need — every quote is fixed before work begins.</p>
+    </div>
+
+    <main class="page-body">
+
+      <section>
+        <div class="grid3">
+          <div class="card plan">
+            <p class="name">// starter</p>
+            <p class="price">$149 <small>starting at</small></p>
+            <p class="for">Perfect for personal sites, portfolios &amp; landing pages.</p>
+            <ul class="checks">
+              <li>1–3 page responsive website</li>
+              <li>Mobile-first modern design</li>
+              <li>Basic on-page SEO setup</li>
+              <li>Contact form &amp; WhatsApp link</li>
+              <li>Delivery in 5–7 days</li>
+            </ul>
+            <a class="btn btn-ghost" href="contact.html">Get started</a>
+          </div>
+
+          <div class="card plan featured">
+            <span class="badge">MOST POPULAR</span>
+            <p class="name">// business</p>
+            <p class="price">$399 <small>starting at</small></p>
+            <p class="for">For businesses that need a complete online presence.</p>
+            <ul class="checks">
+              <li>Up to 8 custom-designed pages</li>
+              <li>WordPress, Shopify or custom build</li>
+              <li>Full SEO &amp; speed optimization</li>
+              <li>Blog / CMS your team can edit</li>
+              <li>Analytics &amp; Google Search setup</li>
+              <li>2 weeks of free support</li>
+            </ul>
+            <a class="btn btn-fill" href="contact.html">Start your project</a>
+          </div>
+
+          <div class="card plan">
+            <p class="name">// custom</p>
+            <p class="price">Let's talk</p>
+            <p class="for">Web apps, e-commerce &amp; anything full-stack.</p>
+            <ul class="checks">
+              <li>React / Next.js applications</li>
+              <li>Custom backend &amp; database</li>
+              <li>API &amp; payment integrations</li>
+              <li>Scalable architecture</li>
+              <li>Ongoing maintenance plans</li>
+            </ul>
+            <a class="btn btn-ghost" href="contact.html">Request a quote</a>
+          </div>
+        </div>
+        <p class="note">Prices are starting points — the final quote depends on your exact requirements. Unlimited revisions on all packages.</p>
+      </section>
+
+      <section class="faq">
+        <p class="label">Common questions</p>
+        <h2>Before you <span>ask</span></h2>
+        <details>
+          <summary>How do payments work?</summary>
+          <p>Typically 50% upfront to book the project and 50% on delivery. For larger projects we can split into milestones. I accept bank transfer, Wise, Payoneer and Fiverr.</p>
+        </details>
+        <details>
+          <summary>What if I need changes after delivery?</summary>
+          <p>Every package includes unlimited revisions during the project and a free support window after launch. After that, I offer affordable monthly maintenance.</p>
+        </details>
+        <details>
+          <summary>How long does a project take?</summary>
+          <p>Starter sites ship in about a week. Business builds usually take 2–3 weeks. Custom applications depend on scope — you'll get a clear timeline with your quote.</p>
+        </details>
+        <details>
+          <summary>Do you work with clients outside Bangladesh?</summary>
+          <p>Yes — most of my clients are in the US and Europe. I work remotely, communicate daily, and adjust to your timezone for calls.</p>
+        </details>
+      </section>
+
+      <section>
+        <div class="band cta-center">
+          <h2>Not sure which package <span>fits</span>?</h2>
+          <p>Send me a short message about your project — I'll reply within 24 hours with an honest recommendation and a fixed quote.</p>
+          <a class="btn btn-fill" href="contact.html">Get a free quote</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Suvo Dev · Sylhet, Bangladesh · <a href="mailto:sddev960@gmail.com" style="color:var(--accent);text-decoration:none;">sddev960@gmail.com</a></footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/protect.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
