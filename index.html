@@ -313,7 +313,8 @@
         return;
       }
 
-      document.getElementById("ghChart").src = "https://ghchart.rs/6366f1/" + GITHUB_USERNAME;
+      document.getElementById("ghChart").src =
+        "https://github-contributions-api.deno.dev/" + GITHUB_USERNAME + ".svg?scheme=indigo&no-total=true";
       document.getElementById("ghContrib").hidden = false;
 
       try {
