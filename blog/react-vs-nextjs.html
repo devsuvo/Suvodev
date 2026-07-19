@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React vs Next.js in 2026: Which One Should You Actually Use? — Suvo Dev Blog</title>
+  <meta name="description" content="React or Next.js? A working developer explains which to choose in 2026 — with the real SEO and performance differences that tutorials skip.">
+  <meta name="author" content="Suvo Dev">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .post { max-width: 720px; }
+    .post-meta { font-family: "JetBrains Mono", Consolas, monospace; font-size: 12px; color: var(--faint); margin-bottom: 26px; }
+    .post-meta b { color: var(--accent); font-weight: 500; }
+    .post h2 { font-size: 18px; margin: 30px 0 10px; }
+    .post p { color: var(--muted); margin-bottom: 14px; }
+    .post ul { color: var(--muted); margin: 0 0 14px 22px; }
+    .post ul li { margin-bottom: 6px; }
+    .back { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; color: var(--accent); text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="../index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../services.html">Services</a>
+        <a href="../work.html">Work</a>
+        <a href="../blog.html" class="active">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <a class="back" href="../blog.html">&larr; cd ../blog</a>
+      <h1 style="margin-top:16px;">React vs Next.js in 2026: Which One Should You Actually Use?</h1>
+    </div>
+
+    <main class="page-body">
+      <article class="post">
+        <p class="post-meta"><b>development</b> · Feb 20, 2026 · by Suvo Dev · Sylhet, Bangladesh</p>
+        <p>React or Next.js? It is one of the most searched questions in frontend development — and the answer is simpler than most tutorials make it.</p>
+        <h2>The short answer</h2>
+        <p>Next.js <em>is</em> React — with the hard parts already solved. Routing, server-side rendering, image optimization, and SEO all come built in. In 2026, for almost every new website or web app, Next.js is the better starting point.</p>
+        <h2>When plain React still makes sense</h2>
+        <ul>
+          <li>Internal dashboards and admin tools where SEO does not matter</li>
+          <li>Apps embedded inside another platform (browser extensions, Electron)</li>
+          <li>Learning — understand React itself before adding a framework on top</li>
+        </ul>
+        <h2>Why Next.js wins for public websites</h2>
+        <p>Search engines strongly prefer pages that render on the server. A plain React app ships an empty HTML shell and builds the page in the browser — bad for SEO and slow on cheap phones. Next.js sends fully rendered HTML, so pages appear instantly and Google indexes everything.</p>
+        <h2>Performance in the real world</h2>
+        <p>On client projects I consistently see Next.js sites score 90+ on Lighthouse with basic care, thanks to automatic code splitting and the built-in image component. Getting the same numbers in plain React takes manual work most projects never do.</p>
+        <p>Planning a React project and unsure which way to go? I have shipped both — happy to point you in the right direction before you write a line of code.</p>
+      </article>
+
+      <section style="margin-top:56px; max-width:720px;">
+        <div class="band">
+          <div>
+            <h2>Need help with your project?</h2>
+            <p>I build fast, modern websites and web apps for businesses worldwide.</p>
+          </div>
+          <a class="btn-hire" href="../contact.html"><span class="p">$</span>Hire Me<span class="ar">&rarr;</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>&copy; 2026 Suvo Dev &middot; Sylhet, Bangladesh</footer>
+
+  <script src="../js/cursor.js"></script>
+  <script src="../js/protect.js"></script>
+</body>
+</html>

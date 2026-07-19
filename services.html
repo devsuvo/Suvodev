@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — Suvo Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .svc { position: relative; overflow: hidden; }
+    .svc .num {
+      position: absolute; top: 18px; right: 22px;
+      font-family: "JetBrains Mono", Consolas, monospace; font-size: 34px; font-weight: 700;
+      color: var(--line); transition: color .25s ease;
+    }
+    .svc:hover .num { color: var(--accent-soft); color: var(--accent); opacity: .35; }
+    .svc .icon {
+      width: 46px; height: 46px; border-radius: 12px; display: flex;
+      align-items: center; justify-content: center; font-size: 20px;
+      background: var(--accent-soft); color: var(--accent); margin-bottom: 16px;
+    }
+    .svc h3 { font-size: 17px; color: #fff; margin-bottom: 4px; }
+    .svc .tag { font-size: 12.5px; color: var(--faint); }
+
+    .step { text-align: center; padding: 10px; }
+    .step .dot {
+      width: 52px; height: 52px; border-radius: 50%; margin: 0 auto 14px;
+      border: 1.5px solid var(--accent-strong); color: var(--accent);
+      font-family: "JetBrains Mono", Consolas, monospace; font-weight: 700; font-size: 15px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 18px var(--glow);
+    }
+    .step h3 { font-size: 14.5px; color: #fff; margin-bottom: 4px; }
+    .step p { font-size: 12.5px; color: var(--faint); max-width: 200px; margin: 0 auto; }
+
+    .why { text-align: center; padding: 26px 20px; }
+    .why .ic { font-size: 20px; color: var(--accent); margin-bottom: 10px; }
+    .why h3 { font-size: 14px; color: #fff; margin-bottom: 4px; }
+    .why p { font-size: 12.5px; color: var(--faint); }
+
+    .cta-center { text-align: center; justify-content: center; flex-direction: column; padding: 56px 40px; }
+    .cta-center p { margin: 0 auto 22px; }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="btn-hire"><span class="p">$</span>Hire Me<span class="ar">→</span></a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <p class="label">Our services</p>
+      <h1>Tailored solutions for <span>digital growth</span></h1>
+      <p>Helping businesses transform complex ideas into seamless digital products with precision and creativity.</p>
+    </div>
+
+    <main class="page-body">
+
+      <section>
+        <div class="grid2">
+          <div class="card svc">
+            <span class="num">01</span>
+            <div class="icon">🖥️</div>
+            <h3>Web Application Development</h3>
+            <p class="tag">Creating stunning and functional web designs</p>
+            <ul class="checks">
+              <li>Custom Full-Stack Solutions</li>
+              <li>Scalable Backend Architecture</li>
+              <li>API Integration &amp; Security</li>
+            </ul>
+          </div>
+          <div class="card svc">
+            <span class="num">02</span>
+            <div class="icon">🎨</div>
+            <h3>Website Design</h3>
+            <p class="tag">Designing intuitive and engaging experiences</p>
+            <ul class="checks">
+              <li>Modern &amp; Responsive Layouts</li>
+              <li>Brand-Centric Visuals</li>
+              <li>High Performance Optimization</li>
+            </ul>
+          </div>
+          <div class="card svc">
+            <span class="num">03</span>
+            <div class="icon">✨</div>
+            <h3>UI/UX Design</h3>
+            <p class="tag">Designing experiences users love</p>
+            <ul class="checks">
+              <li>User Flow &amp; Wireframing</li>
+              <li>Interactive Prototyping</li>
+              <li>User Testing &amp; Feedback</li>
+            </ul>
+          </div>
+          <div class="card svc">
+            <span class="num">04</span>
+            <div class="icon">📈</div>
+            <h3>SEO &amp; Digital Marketing</h3>
+            <p class="tag">Optimizing visibility and driving growth</p>
+            <ul class="checks">
+              <li>Keyword Research &amp; Strategy</li>
+              <li>On-Page &amp; Technical SEO</li>
+              <li>Growth Analytics &amp; Reporting</li>
+            </ul>
+          </div>
+          <div class="card svc">
+            <span class="num">05</span>
+            <div class="icon">🌐</div>
+            <h3>WordPress</h3>
+            <p class="tag">Creating stunning and functional web designs</p>
+            <ul class="checks">
+              <li>Custom Theme Development</li>
+              <li>Plugin Integration &amp; Optimization</li>
+              <li>CMS Training &amp; Support</li>
+            </ul>
+          </div>
+          <div class="card svc">
+            <span class="num">06</span>
+            <div class="icon">🛍️</div>
+            <h3>Shopify</h3>
+            <p class="tag">Designing intuitive and engaging experiences</p>
+            <ul class="checks">
+              <li>Storefront Design &amp; Setup</li>
+              <li>Product Catalog Management</li>
+              <li>Payment &amp; Shipping Integration</li>
+            </ul>
+          </div>
+          <div class="card svc">
+            <span class="num">07</span>
+            <div class="icon">⚡</div>
+            <h3>Wix</h3>
+            <p class="tag">Fast, flexible sites on the Wix platform</p>
+            <ul class="checks">
+              <li>Creative Wix Site Design</li>
+              <li>Corvid (Velo) Custom Logic</li>
+              <li>Responsive Mobile Layouts</li>
+            </ul>
+          </div>
+          <div class="card svc">
+            <span class="num">08</span>
+            <div class="icon">🤖</div>
+            <h3>Vibe Coding</h3>
+            <p class="tag">Modern, high-energy web experiences</p>
+            <ul class="checks">
+              <li>High-Energy Interaction Design</li>
+              <li>Motion Graphics &amp; GSAP</li>
+              <li>Cutting-Edge Frameworks</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <p class="label" style="text-align:center;">Our process</p>
+        <h2 style="text-align:center;">How I bring your <span>vision</span> to life</h2>
+        <div class="grid4" style="margin-top:34px;">
+          <div class="step">
+            <div class="dot">01</div>
+            <h3>Strategy</h3>
+            <p>Deep dive into your goals, target audience, and project scope.</p>
+          </div>
+          <div class="step">
+            <div class="dot">02</div>
+            <h3>Design</h3>
+            <p>Crafting visual identities and intuitive user experiences.</p>
+          </div>
+          <div class="step">
+            <div class="dot">03</div>
+            <h3>Develop</h3>
+            <p>Writing clean, scalable code that powers your digital product.</p>
+          </div>
+          <div class="step">
+            <div class="dot">04</div>
+            <h3>Launch</h3>
+            <p>Final testing, optimization, and seamless deployment.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <p class="label" style="text-align:center;">Why choose me</p>
+        <h2 style="text-align:center;">Uncompromising <span>quality</span> &amp; performance</h2>
+        <div class="grid4" style="margin-top:34px;">
+          <div class="card why">
+            <div class="ic">⚡</div>
+            <h3>Fast Delivery</h3>
+            <p>Optimized workflows for quick turnaround times.</p>
+          </div>
+          <div class="card why">
+            <div class="ic">&lt;/&gt;</div>
+            <h3>Clean Code</h3>
+            <p>Maintainable, scalable, and professional codebase.</p>
+          </div>
+          <div class="card why">
+            <div class="ic">🔍</div>
+            <h3>SEO First</h3>
+            <p>Built-in optimization for maximum visibility.</p>
+          </div>
+          <div class="card why">
+            <div class="ic">🔄</div>
+            <h3>Unlimited Revisions</h3>
+            <p>I don't stop until you are 100% satisfied.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="band cta-center">
+          <h2>Ready to transform your <span>business</span>?</h2>
+          <p>Let's discuss your project and collaborate to bring your vision to life.</p>
+          <a class="btn btn-fill" href="contact.html">Start Project Now</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Suvo Dev · Sylhet, Bangladesh · <a href="mailto:sddev960@gmail.com" style="color:var(--accent);text-decoration:none;">sddev960@gmail.com</a></footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/protect.js"></script>
+</body>
+</html>

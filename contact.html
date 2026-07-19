@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Suvo Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* contact method cards */
+    .method { display: flex; align-items: center; gap: 18px; text-decoration: none; }
+    .method .ic {
+      width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 22px;
+      background: var(--accent-soft); border: 1px solid var(--line);
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .method:hover .ic { border-color: var(--accent-strong); box-shadow: 0 0 16px var(--glow); }
+    .method .k {
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-size: 11.5px; color: var(--faint); display: block;
+    }
+    .method .v { font-size: 15.5px; font-weight: 600; color: #fff; word-break: break-all; }
+    .method .go { margin-left: auto; color: var(--faint); font-size: 16px; transition: transform .2s ease, color .2s ease; }
+    .method:hover .go { transform: translateX(4px); color: var(--accent); }
+
+    /* terminal card */
+    .term {
+      background: #0b0d16; border: 1px solid var(--line); border-radius: 16px;
+      overflow: hidden; font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px;
+    }
+    .term .bar {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surface-2); padding: 10px 14px; border-bottom: 1px solid var(--line);
+    }
+    .term .bar i { width: 10px; height: 10px; border-radius: 50%; }
+    .term .bar i:nth-child(1) { background: #f87171; }
+    .term .bar i:nth-child(2) { background: #fbbf24; }
+    .term .bar i:nth-child(3) { background: #34d399; }
+    .term .bar span { margin-left: 8px; color: var(--faint); font-size: 11.5px; }
+    .term .code { padding: 18px 20px; line-height: 2; }
+    .term .c { color: var(--faint); }
+    .term .key { color: #93c5fd; }
+    .term .str { color: #86efac; }
+    .term .punc { color: var(--muted); }
+    .term a { color: #86efac; text-decoration: none; }
+    .term a:hover { text-decoration: underline; }
+
+    /* socials */
+    .soc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    @media (max-width: 640px) { .soc-grid { grid-template-columns: 1fr 1fr; } }
+    .soc { text-align: center; text-decoration: none; padding: 18px 10px; }
+    .soc .n { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; font-weight: 600; color: #fff; display: block; }
+    .soc .h { font-size: 11.5px; color: var(--faint); }
+
+    .avail {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: "JetBrains Mono", Consolas, monospace; font-size: 12.5px;
+      color: #34d399; background: rgba(52, 211, 153, .08);
+      border: 1px solid rgba(52, 211, 153, .25);
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 18px;
+    }
+    .avail i {
+      width: 8px; height: 8px; border-radius: 50%; background: #34d399;
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse { 50% { opacity: .35; } }
+
+    .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+    @media (max-width: 820px) { .contact-cols { grid-template-columns: 1fr; } }
+    .methods { display: flex; flex-direction: column; gap: 14px; }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <p class="label">Contact</p>
+      <h1>Let's build <span>something</span></h1>
+      <p>No forms, no waiting — reach me directly. I typically reply within 24 hours.</p>
+    </div>
+
+    <main class="page-body">
+
+      <section>
+        <div class="contact-cols">
+
+          <div>
+            <span class="avail"><i></i>available for new projects</span>
+            <div class="methods">
+              <a class="card method" href="mailto:sddev960@gmail.com">
+                <span class="ic">✉️</span>
+                <span><span class="k">// email — best for project briefs</span><span class="v">sddev960@gmail.com</span></span>
+                <span class="go">→</span>
+              </a>
+              <a class="card method" href="tel:+8801601721703">
+                <span class="ic">📞</span>
+                <span><span class="k">// phone — quick questions</span><span class="v">+880 1601-721703</span></span>
+                <span class="go">→</span>
+              </a>
+              <a class="card method" href="https://wa.me/8801601721703" target="_blank">
+                <span class="ic">💬</span>
+                <span><span class="k">// whatsapp — fastest reply</span><span class="v">Message me directly</span></span>
+                <span class="go">→</span>
+              </a>
+              <div class="card method" style="cursor: default;">
+                <span class="ic">📍</span>
+                <span><span class="k">// based in</span><span class="v">Sylhet, Bangladesh (GMT+6)</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="term">
+              <div class="bar"><i></i><i></i><i></i><span>contact.config.js</span></div>
+              <div class="code">
+                <span class="key">const</span> <span class="punc">contact = {</span><br>
+                &nbsp;&nbsp;<span class="key">name</span><span class="punc">:</span> <span class="str">"Suvo"</span><span class="punc">,</span><br>
+                &nbsp;&nbsp;<span class="key">role</span><span class="punc">:</span> <span class="str">"Full Stack Web Developer"</span><span class="punc">,</span><br>
+                &nbsp;&nbsp;<span class="key">email</span><span class="punc">:</span> <a href="mailto:sddev960@gmail.com">"sddev960@gmail.com"</a><span class="punc">,</span><br>
+                &nbsp;&nbsp;<span class="key">phone</span><span class="punc">:</span> <a href="tel:+8801601721703">"+8801601721703"</a><span class="punc">,</span><br>
+                &nbsp;&nbsp;<span class="key">location</span><span class="punc">:</span> <span class="str">"Sylhet, BD"</span><span class="punc">,</span><br>
+                &nbsp;&nbsp;<span class="key">response_time</span><span class="punc">:</span> <span class="str">"&lt; 24 hours"</span><span class="punc">,</span><br>
+                &nbsp;&nbsp;<span class="key">status</span><span class="punc">:</span> <span class="str">"open_to_work"</span><br>
+                <span class="punc">};</span><br>
+                <span class="c">// let's ship something great together.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <p class="label">Elsewhere</p>
+        <h2>Find me online</h2>
+        <div class="soc-grid">
+          <a class="card soc" href="#" target="_blank"><span class="n">GitHub</span><span class="h">code &amp; projects</span></a>
+          <a class="card soc" href="#" target="_blank"><span class="n">LinkedIn</span><span class="h">professional profile</span></a>
+          <a class="card soc" href="#" target="_blank"><span class="n">Fiverr</span><span class="h">hire me directly</span></a>
+          <a class="card soc" href="#" target="_blank"><span class="n">Facebook</span><span class="h">say hello</span></a>
+        </div>
+      </section>
+
+      <section>
+        <div class="band">
+          <div>
+            <h2>Prefer email?</h2>
+            <p>Send a short note about your project — what it is, when you need it, and your budget range. I'll take it from there.</p>
+          </div>
+          <a class="btn-hire" href="mailto:sddev960@gmail.com"><span class="p">$</span>Send an email<span class="ar">→</span></a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Suvo · Built by hand in Sylhet</footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/protect.js"></script>
+</body>
+</html>

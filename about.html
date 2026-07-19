@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Suvo Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .intro-grid {
+      display: grid; grid-template-columns: 260px 1fr; gap: 48px;
+      align-items: start; margin-bottom: 64px;
+    }
+    @media (max-width: 720px) { .intro-grid { grid-template-columns: 1fr; gap: 28px; } }
+    .intro-photo {
+      width: 100%; border-radius: 22px; object-fit: cover; aspect-ratio: 4/5;
+      box-shadow: 0 10px 32px var(--glow);
+    }
+    .intro-grid h2 { font-size: 24px; line-height: 1.35; margin-bottom: 14px; }
+    .intro-grid h2 span { color: var(--accent); }
+    .intro-grid p { color: var(--muted); margin-bottom: 12px; max-width: 620px; }
+    .intro-cta { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 8px; }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-hire"><span class="p">$</span>Hire Me<span class="ar">→</span></a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <p class="label">About me</p>
+      <h1>Get to know me better</h1>
+      <p>Transforming complex ideas into seamless digital products with precision and creativity.</p>
+    </div>
+
+    <main class="page-body">
+
+      <div class="intro-grid">
+        <img class="intro-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=520&h=650&fit=crop" alt="Suvo — Web Developer">
+        <div>
+          <h2>Transforming complex ideas into <span>seamless digital products</span></h2>
+          <p>
+            I am an experienced web developer with a strong focus on creating modern,
+            scalable, and user-friendly digital solutions. My expertise covers frontend
+            technologies such as HTML, CSS, SCSS, Tailwind, Bootstrap, and Material UI,
+            along with advanced knowledge of React.js, TypeScript, Next.js, Node.js,
+            Express, and MongoDB. I also specialize in developing custom WordPress
+            websites tailored to client needs.
+          </p>
+          <p>
+            In addition to development, I have a solid understanding of SEO and UI/UX
+            design principles, allowing me to build products that not only look great
+            but also perform efficiently across platforms. My goal is to combine
+            creativity with technical precision to deliver high-quality solutions
+            that drive real impact.
+          </p>
+          <div class="intro-cta">
+            <a class="btn btn-fill" href="contact.html">Let's connect</a>
+            <a class="btn btn-ghost" href="#" download>Download CV</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><b>7+</b><span>years experience</span></div>
+            <div class="stat"><b>110+</b><span>projects done</span></div>
+            <div class="stat"><b>99%</b><span>client satisfaction</span></div>
+            <div class="stat"><b>20+</b><span>tech mastered</span></div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <p class="label">Experience &amp; Education</p>
+        <h2>My professional journey</h2>
+        <div class="timeline">
+          <div class="entry">
+            <p class="when">2025</p>
+            <h3>IELTS Certification (Score: 5.5)</h3>
+            <p class="where">British Council</p>
+            <p class="detail">Global English language proficiency certification.</p>
+          </div>
+          <div class="entry">
+            <p class="when">2023</p>
+            <h3>Web Design</h3>
+            <p class="where">Codemander</p>
+            <p class="detail">Tali office Road, Rayer Bazar, Dhaka 1209.</p>
+          </div>
+          <div class="entry">
+            <p class="when">2022</p>
+            <h3>Higher Secondary Certificate</h3>
+            <p class="where">Jagatshi Gopal Krishna M. Saipur Rahman High School &amp; College</p>
+            <p class="detail">Moulvibazar, Sylhet, Bangladesh.</p>
+          </div>
+          <div class="entry">
+            <p class="when">DEC 2021 — JAN 2023</p>
+            <h3>Front End Developer (WordPress)</h3>
+            <p class="where">Fiverr</p>
+            <p class="detail">Delivered high-quality custom WordPress themes and frontend solutions for global clients.</p>
+          </div>
+          <div class="entry">
+            <p class="when">2021</p>
+            <h3>Advanced WordPress Development</h3>
+            <p class="where">SoftTech-IT Institute</p>
+            <p class="detail">Dhaka, Uttara Sector-9, House Building.</p>
+          </div>
+          <div class="entry">
+            <p class="when">2019</p>
+            <h3>Secondary School Certificate</h3>
+            <p class="where">Tehlagaon Rashid Uddin High School</p>
+            <p class="detail">Kamalganj, Moulvibazar, Sylhet.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <p class="label">Testimonials</p>
+        <h2>What clients say</h2>
+        <div class="grid3">
+          <div class="card quote">
+            <span class="stars">★★★★★</span>
+            <p class="text">"Professional and fast. The communication was flawless throughout the project."</p>
+            <div class="who"><b>John M.</b><span>Founder</span></div>
+          </div>
+          <div class="card quote">
+            <span class="stars">★★★★★</span>
+            <p class="text">"Exceptional work on our SEO campaign. Our traffic doubled in three months."</p>
+            <div class="who"><b>Sarah Williams</b><span>CMO</span></div>
+          </div>
+          <div class="card quote">
+            <span class="stars">★★★★★</span>
+            <p class="text">"From Wix to a custom Shopify setup, Suvo handled everything. Sales increased by 30%."</p>
+            <div class="who"><b>David Chen</b><span>Business Owner</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <p class="label">FAQ</p>
+        <h2>Frequently asked questions</h2>
+        <details>
+          <summary>Who is developer SUVO DEV?</summary>
+          <p>
+            I'm Suvo — a full stack web developer from Sylhet, Bangladesh, with 5+ years
+            of experience building websites and web applications for clients worldwide,
+            primarily through Fiverr and long-term remote roles.
+          </p>
+        </details>
+        <details>
+          <summary>What services do you offer?</summary>
+          <p>
+            Web application development (React, Next.js, Node.js), custom WordPress
+            builds, UI/UX design in Figma, e-commerce (Shopify, Wix), and SEO &amp;
+            performance optimization.
+          </p>
+        </details>
+        <details>
+          <summary>What technologies do you specialize in?</summary>
+          <p>
+            React.js, Next.js, TypeScript, Tailwind CSS, Node.js, Express, MongoDB,
+            Firebase, and WordPress — plus Figma and Photoshop on the design side.
+          </p>
+        </details>
+        <details>
+          <summary>How can I contact you?</summary>
+          <p>
+            Email me at sddev960@gmail.com, call +8801601721703, or use the
+            <a href="contact.html">contact form</a> — I typically reply within 24 hours.
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <div class="band">
+          <div>
+            <h2>Like what you see?</h2>
+            <p>Let's talk about your project — honest advice, clear timeline, no buzzwords.</p>
+          </div>
+          <a class="btn btn-fill" href="contact.html">Hire me</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Suvo · Built by hand in Sylhet</footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/protect.js"></script>
+</body>
+</html>

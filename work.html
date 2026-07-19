@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work — Suvo Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .project { padding: 0; overflow: hidden; }
+    .project .thumb { height: 210px; overflow: hidden; }
+    .project .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .project:hover .thumb img { transform: scale(1.04); }
+    .project .body { padding: 18px 22px 22px; }
+    .project h3 { font-size: 15.5px; margin-bottom: 6px; }
+    .project p { font-size: 13.5px; color: var(--muted); margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="skills.html">Skills</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn-hire"><span class="p">$</span>Hire Me<span class="ar">→</span></a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <p class="label">Selected work</p>
+      <h1>Projects I'm proud of</h1>
+      <p>A few things I've designed and built — each one shipped, live, and doing its job.</p>
+    </div>
+
+    <main class="page-body">
+
+      <section>
+        <div class="grid2">
+          <div class="card project">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&h=450&fit=crop" alt="The Coffee Place Sable"></div>
+            <div class="body">
+              <h3>The Coffee Place Sable</h3>
+              <p>A polished coffee-shop website with menu, gallery, and online ordering flow.</p>
+              <div class="pills"><span class="pill">Next.js</span><span class="pill">Tailwind</span></div>
+            </div>
+          </div>
+          <div class="card project">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=700&h=450&fit=crop" alt="CodeStack"></div>
+            <div class="body">
+              <h3>CodeStack — Q&amp;A Platform</h3>
+              <p>Full stack question-and-answer community with auth, voting, and moderation.</p>
+              <div class="pills"><span class="pill">React</span><span class="pill">Node.js</span><span class="pill">MongoDB</span></div>
+            </div>
+          </div>
+          <div class="card project">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&h=450&fit=crop" alt="TaskUp"></div>
+            <div class="body">
+              <h3>TaskUp — Task Management</h3>
+              <p>Personal productivity app with boards, deadlines, and progress tracking.</p>
+              <div class="pills"><span class="pill">Next.js</span><span class="pill">Firebase</span></div>
+            </div>
+          </div>
+          <div class="card project">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&h=450&fit=crop" alt="Kiandc.com"></div>
+            <div class="body">
+              <h3>Kiandc.com — Entrepreneur Site</h3>
+              <p>Brand website for an entrepreneur — custom WordPress theme, fast and editable.</p>
+              <div class="pills"><span class="pill">WordPress</span><span class="pill">Elementor</span></div>
+            </div>
+          </div>
+          <div class="card project">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=700&h=450&fit=crop" alt="E-commerce platform"></div>
+            <div class="body">
+              <h3>E-Commerce Platform</h3>
+              <p>Full-featured store with real-time inventory management and payments.</p>
+              <div class="pills"><span class="pill">React</span><span class="pill">Node.js</span><span class="pill">MongoDB</span></div>
+            </div>
+          </div>
+          <div class="card project">
+            <div class="thumb"><img src="https://images.unsplash.com/photo-1553531088-d03cf3b3db76?w=700&h=450&fit=crop" alt="Analytics dashboard"></div>
+            <div class="body">
+              <h3>Analytics Dashboard</h3>
+              <p>Data visualization dashboard with real-time analytics and reporting.</p>
+              <div class="pills"><span class="pill">React</span><span class="pill">D3.js</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="band">
+          <div>
+            <h2>Want yours on this page?</h2>
+            <p>Every project here started with a short conversation. Let's have one.</p>
+          </div>
+          <a class="btn btn-fill" href="contact.html">Start your project</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© 2026 Suvo · Built by hand in Sylhet</footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/protect.js"></script>
+</body>
+</html>
