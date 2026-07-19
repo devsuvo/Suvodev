@@ -13,6 +13,31 @@
   document.body.appendChild(wa);
 })();
 
+// Mobile hamburger menu: injects a toggle button into the topbar
+(function () {
+  var bar = document.querySelector('.topbar');
+  var nav = document.querySelector('.topnav');
+  if (!bar || !nav) return;
+  var btn = document.createElement('button');
+  btn.className = 'nav-toggle';
+  btn.setAttribute('aria-label', 'Open menu');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '☰';
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.innerHTML = open ? '✕' : '☰';
+    btn.setAttribute('aria-expanded', open);
+  });
+  // close when a link is tapped or when tapping outside
+  nav.addEventListener('click', function (e) {
+    if (e.target.closest('a')) { nav.classList.remove('open'); btn.innerHTML = '☰'; }
+  });
+  document.addEventListener('click', function (e) {
+    if (!bar.contains(e.target)) { nav.classList.remove('open'); btn.innerHTML = '☰'; }
+  });
+  bar.appendChild(btn);
+})();
+
 // Instant navigation: prerender/prefetch internal pages so menu clicks feel instant
 (function () {
   if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
