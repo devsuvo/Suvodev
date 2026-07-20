@@ -1,68 +1,31 @@
 // ===== Mouse & Scroll Effects =====
 
-// --- Custom cursor: dot + smooth trailing ring ---
-const dot = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-const finePointer = window.matchMedia('(pointer: fine)').matches;
-
-if (finePointer && dot && ring) {
-  document.body.classList.add('custom-cursor-on');
-
-  window.addEventListener('mousemove', (e) => {
-    mx = e.clientX;
-    my = e.clientY;
-    dot.style.transform = `translate(${mx}px, ${my}px)`;
-    spawnParticle(mx, my);
-  });
-
-  (function animateRing() {
-    rx += (mx - rx) * 0.15;
-    ry += (my - ry) * 0.15;
-    ring.style.transform = `translate(${rx}px, ${ry}px)`;
-    requestAnimationFrame(animateRing);
-  })();
-
-  // Grow the ring over links/buttons
-  document.addEventListener('mouseover', (e) => {
-    if (e.target.closest('a, button, input, textarea, select')) {
-      ring.classList.add('cursor-hover');
-    }
-  });
-  document.addEventListener('mouseout', (e) => {
-    if (e.target.closest('a, button, input, textarea, select')) {
-      ring.classList.remove('cursor-hover');
-    }
-  });
-}
-
-// --- Sparkle particle trail (throttled) ---
-let lastParticle = 0;
-function spawnParticle(x, y) {
-  const now = performance.now();
-  if (now - lastParticle < 40) return;
-  lastParticle = now;
-
-  const p = document.createElement('span');
-  p.className = 'trail-particle';
-  const size = 4 + Math.random() * 5;
-  p.style.width = p.style.height = size + 'px';
-  p.style.left = x + 'px';
-  p.style.top = y + 'px';
-  p.style.setProperty('--tx', (Math.random() - 0.5) * 60 + 'px');
-  p.style.setProperty('--ty', (Math.random() - 0.5) * 60 + 'px');
-  document.body.appendChild(p);
-  setTimeout(() => p.remove(), 700);
-}
-
 // --- Spotlight effect: glow follows the mouse inside cards ---
-document.addEventListener('mousemove', (e) => {
-  document.querySelectorAll('.spotlight-card, .service-card').forEach((card) => {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty('--mx', e.clientX - rect.left + 'px');
-    card.style.setProperty('--my', e.clientY - rect.top + 'px');
-  });
-});
+// rAF-throttled and scoped to cards currently in the viewport so it doesn't
+// do a full DOM query + layout read on every single mousemove event.
+(function () {
+  let spotlightCards = [];
+  function refreshSpotlightCards() {
+    spotlightCards = Array.from(document.querySelectorAll('.spotlight-card, .service-card'));
+  }
+  refreshSpotlightCards();
+  window.addEventListener('resize', refreshSpotlightCards, { passive: true });
+
+  let lastX = 0, lastY = 0, queued = false;
+  function applySpotlight() {
+    queued = false;
+    for (const card of spotlightCards) {
+      const rect = card.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > innerHeight) continue; // off-screen, skip
+      card.style.setProperty('--mx', lastX - rect.left + 'px');
+      card.style.setProperty('--my', lastY - rect.top + 'px');
+    }
+  }
+  document.addEventListener('mousemove', (e) => {
+    lastX = e.clientX; lastY = e.clientY;
+    if (!queued) { queued = true; requestAnimationFrame(applySpotlight); }
+  }, { passive: true });
+})();
 
 // --- 3D tilt on hero/about images ---
 document.querySelectorAll('.tilt-card').forEach((card) => {

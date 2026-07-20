@@ -1,3 +1,33 @@
+// Light/dark theme toggle, injected into the topbar next to the nav
+(function () {
+  var KEY = 'suvo-theme';
+
+  function apply(theme) {
+    if (theme) document.documentElement.setAttribute('data-theme', theme);
+    else document.documentElement.removeAttribute('data-theme');
+  }
+
+  function current() {
+    return localStorage.getItem(KEY) === 'light' ? 'light' : 'dark';
+  }
+
+  var bar = document.querySelector('.topbar');
+  var nav = document.querySelector('.topnav');
+  if (!bar || !nav) return;
+
+  var btn = document.createElement('button');
+  btn.className = 'theme-toggle';
+  btn.type = 'button';
+  btn.setAttribute('aria-label', 'Toggle light / dark theme');
+  btn.innerHTML = '<span class="ti-moon">🌙</span><span class="ti-sun">☀️</span>';
+  btn.addEventListener('click', function () {
+    var next = current() === 'light' ? 'dark' : 'light';
+    localStorage.setItem(KEY, next);
+    apply(next);
+  });
+  nav.appendChild(btn);
+})();
+
 // Floating quick-contact button (WhatsApp) shown on every page
 (function () {
   var wa = document.createElement('a');

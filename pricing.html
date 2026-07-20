@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){if(localStorage.getItem("suvo-theme")==="light")document.documentElement.setAttribute("data-theme","light");})();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing — Suvo Dev</title>
@@ -12,12 +13,15 @@
   <style>
     .plan { display: flex; flex-direction: column; padding: 30px 28px; }
     .plan .name { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; color: var(--accent); letter-spacing: .06em; margin-bottom: 10px; }
-    .plan .price { font-family: "JetBrains Mono", Consolas, monospace; font-size: 32px; font-weight: 700; color: #fff; }
+    .plan .price { font-family: "JetBrains Mono", Consolas, monospace; font-size: 32px; font-weight: 700; color: var(--ink); }
     .plan .price small { font-size: 13px; color: var(--faint); font-weight: 400; }
     .plan .for { font-size: 13px; color: var(--muted); margin: 6px 0 16px; }
     .plan .checks { flex: 1; margin-bottom: 22px; }
     .plan .btn { text-align: center; }
-    .plan.featured { border-color: var(--accent-strong); box-shadow: 0 0 0 1px var(--accent-strong), 0 14px 40px var(--glow); position: relative; }
+    .plan.featured {
+      border-color: transparent; box-shadow: 0 14px 40px var(--glow); position: relative;
+    }
+    .plan.featured::before { opacity: 1; animation-play-state: running; }
     .plan.featured .badge {
       position: absolute; top: -12px; right: 22px;
       font-family: "JetBrains Mono", Consolas, monospace; font-size: 11px; font-weight: 600;

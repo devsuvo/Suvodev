@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){if(localStorage.getItem("suvo-theme")==="light")document.documentElement.setAttribute("data-theme","light");})();</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services — Suvo Dev</title>
@@ -31,7 +32,7 @@
       transition: transform .25s ease, box-shadow .25s ease;
     }
     .svc:hover .icon { transform: scale(1.08) rotate(-4deg); box-shadow: 0 6px 18px var(--glow); }
-    .svc h3 { font-size: 17px; color: #fff; margin-bottom: 4px; }
+    .svc h3 { font-size: 17px; color: var(--ink); margin-bottom: 4px; }
     .svc .tag { font-size: 12.5px; color: var(--faint); }
     .svc .checks { flex: 1; }
     .svc .go {
@@ -62,7 +63,7 @@
       box-shadow: 0 0 18px var(--glow);
       transition: transform .25s ease, background .25s ease, color .25s ease;
     }
-    .step:hover .dot { transform: scale(1.1); background: var(--accent-strong); color: #fff; }
+    .step:hover .dot { transform: scale(1.1); background: var(--accent-strong); color: var(--ink); }
     @media (min-width: 821px) {
       .step:not(:last-child)::after {
         content: ""; position: absolute; top: 36px; left: calc(50% + 34px);
@@ -71,12 +72,12 @@
         opacity: .5;
       }
     }
-    .step h3 { font-size: 14.5px; color: #fff; margin-bottom: 4px; }
+    .step h3 { font-size: 14.5px; color: var(--ink); margin-bottom: 4px; }
     .step p { font-size: 12.5px; color: var(--faint); max-width: 200px; margin: 0 auto; }
 
     .why { text-align: center; padding: 26px 20px; }
     .why .ic { font-size: 20px; color: var(--accent); margin-bottom: 10px; }
-    .why h3 { font-size: 14px; color: #fff; margin-bottom: 4px; }
+    .why h3 { font-size: 14px; color: var(--ink); margin-bottom: 4px; }
     .why p { font-size: 12.5px; color: var(--faint); }
 
     .cta-center { text-align: center; justify-content: center; flex-direction: column; padding: 56px 40px; }
