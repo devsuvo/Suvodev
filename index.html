@@ -308,6 +308,10 @@
     const GITHUB_USERNAME = "devsuvo";
     // ================================================
 
+    const escapeHtml = (str) => String(str ?? "").replace(/[&<>"']/g, (c) => (
+      { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+    ));
+
     const timeAgo = (iso) => {
       const s = Math.floor((Date.now() - new Date(iso)) / 1000);
       if (s < 3600) return Math.max(1, Math.floor(s / 60)) + " min ago";
@@ -317,19 +321,19 @@
     };
 
     const describeEvent = (ev) => {
-      const repo = ev.repo.name.split("/")[1];
-      const url = "https://github.com/" + ev.repo.name;
+      const repo = escapeHtml(ev.repo.name.split("/")[1]);
+      const url = "https://github.com/" + ev.repo.name.split("/").map(encodeURIComponent).join("/");
       const link = `<a href="${url}" target="_blank">${repo}</a>`;
       switch (ev.type) {
         case "PushEvent": {
           const n = ev.payload.commits ? ev.payload.commits.length : 0;
-          const msg = n ? ev.payload.commits[n - 1].message.split("\n")[0] : "";
+          const msg = n ? escapeHtml(ev.payload.commits[n - 1].message.split("\n")[0]) : "";
           return `<b>Pushed ${n} commit${n > 1 ? "s" : ""}</b> to ${link}${msg ? " — “" + msg + "”" : ""}`;
         }
         case "CreateEvent":
           return ev.payload.ref_type === "repository"
             ? `<b>Created repository</b> ${link}`
-            : `<b>Created ${ev.payload.ref_type}</b> <b>${ev.payload.ref || ""}</b> in ${link}`;
+            : `<b>Created ${escapeHtml(ev.payload.ref_type)}</b> <b>${escapeHtml(ev.payload.ref || "")}</b> in ${link}`;
         case "PullRequestEvent":
           return `<b>${ev.payload.action === "closed" ? "Closed" : "Opened"} pull request</b> in ${link}`;
         case "IssuesEvent":
@@ -383,11 +387,11 @@
         reposBox.innerHTML = repos.length
           ? repos.map(r => `
               <div class="gh-item">
-                <a href="${r.html_url}" target="_blank">${r.name}</a>
-                ${r.description ? `<div>${r.description}</div>` : ""}
+                <a href="${escapeHtml(r.html_url)}" target="_blank">${escapeHtml(r.name)}</a>
+                ${r.description ? `<div>${escapeHtml(r.description)}</div>` : ""}
                 <div class="gh-repo-meta">
-                  ${r.language ? `<span>● ${r.language}</span>` : ""}
-                  <span>★ ${r.stargazers_count}</span>
+                  ${r.language ? `<span>● ${escapeHtml(r.language)}</span>` : ""}
+                  <span>★ ${Number(r.stargazers_count) || 0}</span>
                   <span>updated ${timeAgo(r.pushed_at)}</span>
                 </div>
               </div>`).join("")
