@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://suvo.dev/</loc><priority>1.0</priority></url>
+  <url><loc>https://suvo.dev/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://suvo.dev/services.html</loc><priority>0.8</priority></url>
+  <url><loc>https://suvo.dev/skills.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/work.html</loc><priority>0.7</priority></url>
+  <url><loc>https://suvo.dev/pricing.html</loc><priority>0.8</priority></url>
+  <url><loc>https://suvo.dev/contact.html</loc><priority>0.7</priority></url>
+  <url><loc>https://suvo.dev/blog.html</loc><priority>0.8</priority></url>
+  <url><loc>https://suvo.dev/blog/hire-freelance-web-developer.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/learn-web-development-2026.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/react-vs-nextjs.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/seo-basics-small-business.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/shopify-vs-woocommerce.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/ui-ux-mistakes-conversions.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/website-cost-bangladesh.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/website-speed-seo.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/why-business-needs-website.html</loc><priority>0.6</priority></url>
+  <url><loc>https://suvo.dev/blog/wordpress-vs-custom-website.html</loc><priority>0.6</priority></url>
+</urlset>
