@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ছোট ব্যবসার ওয়েবসাইট সিকিউরিটি: যে ৭টি বিষয় উপেক্ষা করা যাবে না — Suvo Dev Blog</title>
+  <meta name="description" content="হ্যাকিং, ডেটা লিক আর ডাউনটাইম থেকে বাঁচতে ছোট ব্যবসার ওয়েবসাইটে যে সিকিউরিটি বিষয়গুলো অবশ্যই থাকা উচিত — একজন ডেভেলপারের বাস্তব চেকলিস্ট।">
+  <link rel="icon" type="image/png" href="/img/23.png">
+  <link rel="apple-touch-icon" href="/img/23.png">
+  <link rel="canonical" href="https://suvo.dev/blog/website-security-small-business.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Suvo Dev">
+  <meta property="og:title" content="ছোট ব্যবসার ওয়েবসাইট সিকিউরিটি: যে ৭টি বিষয় উপেক্ষা করা যাবে না — Suvo Dev Blog">
+  <meta property="og:description" content="হ্যাকিং, ডেটা লিক আর ডাউনটাইম থেকে বাঁচতে ছোট ব্যবসার ওয়েবসাইটে যে সিকিউরিটি বিষয়গুলো অবশ্যই থাকা উচিত — একজন ডেভেলপারের বাস্তব চেকলিস্ট।">
+  <meta property="og:url" content="https://suvo.dev/blog/website-security-small-business.html">
+  <meta property="og:image" content="https://suvo.dev/img/23.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ছোট ব্যবসার ওয়েবসাইট সিকিউরিটি: যে ৭টি বিষয় উপেক্ষা করা যাবে না — Suvo Dev Blog">
+  <meta name="twitter:description" content="হ্যাকিং, ডেটা লিক আর ডাউনটাইম থেকে বাঁচতে ছোট ব্যবসার ওয়েবসাইটে যে সিকিউরিটি বিষয়গুলো অবশ্যই থাকা উচিত — একজন ডেভেলপারের বাস্তব চেকলিস্ট।">
+  <meta name="twitter:image" content="https://suvo.dev/img/23.png">
+  <meta name="author" content="Suvo Dev">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .post { max-width: 720px; font-family: "Hind Siliguri", "Inter", sans-serif; }
+    .post-meta { font-family: "JetBrains Mono", Consolas, monospace; font-size: 12px; color: var(--faint); margin-bottom: 26px; }
+    .post-meta b { color: var(--accent); font-weight: 500; }
+    .post h2 { font-size: 19px; margin: 30px 0 10px; font-weight: 600; }
+    .post p { color: var(--muted); margin-bottom: 14px; line-height: 1.95; font-size: 15.5px; }
+    .post ul { color: var(--muted); margin: 0 0 14px 22px; }
+    .post ul li { margin-bottom: 9px; line-height: 1.85; font-size: 15.5px; }
+    .back { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; color: var(--accent); text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+    .page-head h1 { font-family: "Hind Siliguri", "Inter", sans-serif; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="../index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../services.html">Services</a>
+        <a href="../work.html">Work</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../blog.html" class="active">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <a class="back" href="../blog.html">&larr; cd ../blog</a>
+      <h1 style="margin-top:16px;">ছোট ব্যবসার ওয়েবসাইট সিকিউরিটি: যে ৭টি বিষয় উপেক্ষা করা যাবে না</h1>
+    </div>
+
+    <main class="page-body">
+      <article class="post">
+        <p class="post-meta"><b>guides</b> · Jul 22, 2026 · by Suvo Dev · Sylhet, Bangladesh</p>
+
+        <p>বেশিরভাগ ছোট ব্যবসার মালিক মনে করেন, হ্যাকাররা শুধু বড় বড় কোম্পানির পেছনে লাগে। বাস্তবতা সম্পূর্ণ উল্টো — ছোট ওয়েবসাইটই সবচেয়ে সহজ টার্গেট, কারণ সেখানে সিকিউরিটি নিয়ে সবচেয়ে কম মাথা ঘামানো হয়। প্রতিটা প্রজেক্টে সার্ভার সেটআপ করতে গিয়ে আমি একই ভুলগুলো বারবার দেখি। তাই আজকে লিখছি, একটা ওয়েবসাইটে ন্যূনতম যে সিকিউরিটি বিষয়গুলো থাকা উচিত, সেগুলো নিয়ে।</p>
+
+        <h2>১. HTTPS বাধ্যতামূলক করুন, ঐচ্ছিক নয়</h2>
+        <p>আজকের দিনে HTTPS ছাড়া ওয়েবসাইট শুধু অনিরাপদই নয়, Google সার্চেও পিছিয়ে পড়ে। বেশিরভাগ হোস্টিং প্রোভাইডার এখন ফ্রিতে SSL সার্টিফিকেট দেয় (Let's Encrypt), তাই এটা বাদ দেওয়ার কোনো অজুহাত নেই। HTTP থেকে HTTPS-এ রিডাইরেক্টও নিশ্চিত করতে হবে, নাহলে কেউ পুরনো লিংকে ঢুকলে অসুরক্ষিত সংযোগে থেকে যাবে।</p>
+
+        <h2>২. সিকিউরিটি হেডার সেট করুন</h2>
+        <p>Content-Security-Policy, X-Frame-Options, X-Content-Type-Options-এর মতো HTTP হেডারগুলো ব্রাউজারকে বলে দেয় কোন ধরনের কনটেন্ট বিশ্বাসযোগ্য। এগুলো ঠিকভাবে সেট না থাকলে ক্লিকজ্যাকিং বা ইনজেকশন অ্যাটাকের ঝুঁকি বাড়ে। এটা একবার সার্ভার কনফিগে (.htaccess বা nginx কনফিগে) বসিয়ে দিলে সারা ওয়েবসাইট জুড়ে সুরক্ষা পাওয়া যায়।</p>
+
+        <h2>৩. ইনপুট ভ্যালিডেশন এবং XSS প্রতিরোধ</h2>
+        <p>কনটাক্ট ফর্ম, কমেন্ট বক্স, সার্চ বার — যেখানেই ব্যবহারকারী কিছু টাইপ করতে পারে, সেখানেই ইনপুট স্যানিটাইজ করা জরুরি। কেউ যদি স্ক্রিপ্ট ট্যাগ বা HTML কোড ঢুকিয়ে দেয় এবং সেটা সরাসরি পেজে রেন্ডার হয়ে যায়, তাহলে সেটা Cross-Site Scripting (XSS) দুর্বলতা তৈরি করে। বিশেষ করে থার্ড-পার্টি API বা widget থেকে আসা ডেটা কখনো না যাচাই করে সরাসরি HTML-এ বসানো উচিত নয়।</p>
+
+        <h2>৪. পাসওয়ার্ড এবং লগইন সুরক্ষা</h2>
+        <ul>
+          <li><b>অ্যাডমিন প্যানেলে সহজ পাসওয়ার্ড নয়:</b> "admin123"-এর মতো পাসওয়ার্ড এখনো সবচেয়ে বেশি ব্যবহৃত হয় — এবং সবচেয়ে বেশি হ্যাক হয়।</li>
+          <li><b>Rate limiting চালু রাখুন:</b> লগইন পেজে বারবার ভুল পাসওয়ার্ড দেওয়ার চেষ্টা ব্লক করা দরকার (brute-force প্রতিরোধে)।</li>
+          <li><b>Two-Factor Authentication (2FA):</b> যেখানে সম্ভব, বিশেষ করে অ্যাডমিন অ্যাকাউন্টে, এটা যোগ করলে ঝুঁকি অনেকটাই কমে যায়।</li>
+        </ul>
+
+        <h2>৫. নিয়মিত আপডেট এবং প্লাগইন ম্যানেজমেন্ট</h2>
+        <p>WordPress বা যেকোনো CMS ব্যবহার করলে প্লাগইন ও থিম আপডেট রাখা অত্যন্ত গুরুত্বপূর্ণ। বেশিরভাগ ওয়ার্ডপ্রেস সাইট হ্যাক হয় পুরনো, দুর্বলতাযুক্ত প্লাগইনের মাধ্যমে — নতুন কোনো ফিচারের কারণে নয়। যেসব প্লাগইন ব্যবহার হচ্ছে না, সেগুলো সরিয়ে ফেলাও একটা ভালো অভ্যাস, কারণ প্রতিটা অতিরিক্ত প্লাগইন একটা নতুন সম্ভাব্য দুর্বলতা।</p>
+
+        <h2>৬. নিয়মিত ব্যাকআপ রাখুন</h2>
+        <p>সিকিউরিটি নিয়ে যত সতর্কতাই নেওয়া হোক না কেন, ১০০% নিরাপত্তা বলে কিছু নেই। তাই অটোমেটেড ব্যাকআপ সিস্টেম থাকা জরুরি — প্রতিদিন বা প্রতি সপ্তাহে, ডেটাবেজ ও ফাইল দুটোরই। কিছু ভুল হলে বা হ্যাক হলে দ্রুত আগের অবস্থায় ফিরে যাওয়ার এটাই একমাত্র নির্ভরযোগ্য উপায়।</p>
+
+        <h2>৭. ফর্ম ডেটা এবং API কী নিরাপদে রাখুন</h2>
+        <p>API কী, ডেটাবেজ পাসওয়ার্ড কখনো ফ্রন্টএন্ড কোডে বা GitHub রিপোজিটরিতে সরাসরি রাখা উচিত নয়। এনভায়রনমেন্ট ভ্যারিয়েবল (.env ফাইল) ব্যবহার করে এগুলো আলাদা রাখতে হবে এবং .gitignore-এ যোগ করতে হবে, যাতে ভুলবশত পাবলিক হয়ে না যায়।</p>
+
+        <h2>শেষ কথা</h2>
+        <p>সিকিউরিটি একবার সেটআপ করে ভুলে যাওয়ার বিষয় নয় — এটা একটা চলমান প্রক্রিয়া। কিন্তু উপরের বিষয়গুলো ঠিকভাবে বসিয়ে দিলে আপনার ওয়েবসাইট বেশিরভাগ সাধারণ আক্রমণ থেকে নিরাপদ থাকবে। যদি নিশ্চিত না হন আপনার সাইট এই মানদণ্ডগুলো পূরণ করছে কিনা, একজন ডেভেলপারকে দিয়ে একটা বেসিক সিকিউরিটি অডিট করিয়ে নেওয়া সবচেয়ে ভালো বিনিয়োগগুলোর একটা।</p>
+      </article>
+
+      <section style="margin-top:56px; max-width:720px;">
+        <div class="band">
+          <div>
+            <h2>Need help with your project?</h2>
+            <p>I build fast, modern websites and web apps for businesses worldwide.</p>
+          </div>
+          <a class="btn-hire" href="../contact.html"><span class="p">$</span>Hire Me<span class="ar">&rarr;</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>&copy; 2026 Suvo Dev &middot; Sylhet, Bangladesh</footer>
+
+  <script src="../js/cursor.js"></script>
+  <script src="../js/protect.js"></script>
+  <script src="../js/site.js"></script>
+</body>
+</html>
