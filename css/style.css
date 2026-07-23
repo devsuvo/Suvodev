@@ -67,9 +67,9 @@ img { -webkit-user-drag: none; pointer-events: none; }
 a img { pointer-events: auto; }
 
 /* ---------- top bar ---------- */
-.topbar { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
-.logo { font-weight: 700; font-size: 17px; text-decoration: none; letter-spacing: -.02em; color: var(--ink); }
-.topnav { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; gap: 24px; }
+.logo { font-weight: 700; font-size: 17px; text-decoration: none; letter-spacing: -.02em; color: var(--ink); flex-shrink: 0; }
+.topnav { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; justify-content: flex-end; }
 .topnav a { font-family: "JetBrains Mono", Consolas, monospace; text-decoration: none; font-size: 13px; color: var(--muted); font-weight: 500; }
 .topnav a:hover, .topnav a.active { color: var(--accent); }
 @media (max-width: 560px) { .topnav { gap: 14px; } }
@@ -498,9 +498,9 @@ footer a:hover { text-decoration: underline !important; }
 .theme-toggle .ti-sun { display: none; }
 :root[data-theme="light"] .theme-toggle .ti-moon { display: none; }
 :root[data-theme="light"] .theme-toggle .ti-sun { display: inline; }
-@media (max-width: 760px) { .theme-toggle { margin: 0 0 0 8px; } }
+@media (max-width: 900px) { .theme-toggle { margin: 0 0 0 8px; } }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .nav-toggle { display: flex; }
   .topnav {
     display: none;
