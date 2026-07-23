@@ -34,6 +34,27 @@
     .back { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; color: var(--accent); text-decoration: none; }
     .back:hover { text-decoration: underline; }
     .page-head h1 { font-family: "Noto Sans Bengali", "Inter", sans-serif; }
+
+    /* code-window summary card */
+    .term {
+      background: #0b0d16; border: 1px solid var(--line); border-radius: 16px;
+      overflow: hidden; font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px;
+      margin: 24px 0 30px;
+    }
+    .term .bar {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--surface-2); padding: 10px 14px; border-bottom: 1px solid var(--line);
+    }
+    .term .bar i { width: 10px; height: 10px; border-radius: 50%; }
+    .term .bar i:nth-child(1) { background: #f87171; }
+    .term .bar i:nth-child(2) { background: #fbbf24; }
+    .term .bar i:nth-child(3) { background: #34d399; }
+    .term .bar span { margin-left: 8px; color: var(--faint); font-size: 11.5px; }
+    .term .code { padding: 18px 20px; line-height: 2; }
+    .term .c { color: var(--faint); }
+    .term .key { color: #93c5fd; }
+    .term .str { color: #86efac; }
+    .term .punc { color: var(--muted); }
   </style>
 </head>
 <body>
@@ -45,6 +66,7 @@
         <a href="../about.html">About</a>
         <a href="../services.html">Services</a>
         <a href="../work.html">Work</a>
+        <a href="../case-studies.html">Case Studies</a>
         <a href="../pricing.html">Pricing</a>
         <a href="../blog.html" class="active">Blog</a>
         <a href="../contact.html">Contact</a>
@@ -61,6 +83,19 @@
         <p class="post-meta"><b>development</b> · Jul 22, 2026 · by Suvo Dev · Sylhet, Bangladesh</p>
 
         <p>গত দুই-তিন বছরে ওয়েব ডেভেলপমেন্ট জগতে যতটা পরিবর্তন এসেছে, তার আগের দশ বছরেও অতটা আসেনি। কারণ একটাই — AI। একজন ফুল স্ট্যাক ডেভেলপার হিসেবে প্রতিদিন ক্লায়েন্টের কাজ করতে গিয়ে আমি নিজে যা দেখছি, অভিজ্ঞতা করছি, সেটাই এখানে সরাসরি লিখছি। কোনো হাইপ নয়, বাস্তবতা।</p>
+
+        <div class="term">
+          <div class="bar"><i></i><i></i><i></i><span>ai-in-webdev.summary.js</span></div>
+          <div class="code">
+            <span class="key">const</span> <span class="punc">summary = {</span><br>
+            &nbsp;&nbsp;<span class="key">speeds_up</span><span class="punc">:</span> <span class="str">"boilerplate, repetitive code, first drafts"</span><span class="punc">,</span><br>
+            &nbsp;&nbsp;<span class="key">still_needs_human</span><span class="punc">:</span> <span class="str">"architecture, security, judgment"</span><span class="punc">,</span><br>
+            &nbsp;&nbsp;<span class="key">client_expectation</span><span class="punc">:</span> <span class="str">"faster delivery, same quality"</span><span class="punc">,</span><br>
+            &nbsp;&nbsp;<span class="key">risk_if_ignored</span><span class="punc">:</span> <span class="str">"hidden bugs, security gaps"</span><br>
+            <span class="punc">};</span><br>
+            <span class="c">// AI is the assistant. The decision-maker is still you.</span>
+          </div>
+        </div>
 
         <h2>কোড লেখার গতি বদলে গেছে</h2>
         <p>আগে একটা সাধারণ ল্যান্ডিং পেজের HTML/CSS স্ট্রাকচার বসাতেই ঘণ্টাখানেক লাগত। এখন AI কোডিং অ্যাসিস্ট্যান্ট ব্যবহার করে সেই কাজ কয়েক মিনিটে হয়ে যায়। রিপিটিটিভ কোড, বয়েলারপ্লেট, ফর্ম ভ্যালিডেশন, API ইন্টিগ্রেশনের ছোট ছোট অংশ — এসব জায়গায় AI সত্যিই সময় বাঁচাচ্ছে। কিন্তু এখানেই একটা ভুল ধারণা তৈরি হয়েছে যে "AI দিয়ে যে কেউ এখন ডেভেলপার হয়ে যেতে পারবে" — বাস্তবতা তা নয়।</p>
