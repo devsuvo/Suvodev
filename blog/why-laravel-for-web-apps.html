@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>(function(){if(localStorage.getItem("suvo-theme")==="light")document.documentElement.setAttribute("data-theme","light");})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I Build Custom Web Apps with PHP and Laravel — Suvo Dev Blog</title>
+  <meta name="description" content="A practical look at why Laravel is my default choice for custom web applications — client portals, dashboards, and backend systems that need to last.">
+  <link rel="icon" type="image/png" href="/img/23.png">
+  <link rel="apple-touch-icon" href="/img/23.png">
+  <link rel="canonical" href="https://suvo.dev/blog/why-laravel-for-web-apps.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Suvo Dev">
+  <meta property="og:title" content="Why I Build Custom Web Apps with PHP and Laravel — Suvo Dev Blog">
+  <meta property="og:description" content="A practical look at why Laravel is my default choice for custom web applications — client portals, dashboards, and backend systems that need to last.">
+  <meta property="og:url" content="https://suvo.dev/blog/why-laravel-for-web-apps.html">
+  <meta property="og:image" content="https://suvo.dev/img/23.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why I Build Custom Web Apps with PHP and Laravel — Suvo Dev Blog">
+  <meta name="twitter:description" content="A practical look at why Laravel is my default choice for custom web applications — client portals, dashboards, and backend systems that need to last.">
+  <meta name="twitter:image" content="https://suvo.dev/img/23.png">
+  <meta name="author" content="Suvo Dev">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .post { max-width: 720px; }
+    .post-meta { font-family: "JetBrains Mono", Consolas, monospace; font-size: 12px; color: var(--faint); margin-bottom: 26px; }
+    .post-meta b { color: var(--accent); font-weight: 500; }
+    .post h2 { font-size: 18px; margin: 30px 0 10px; }
+    .post p { color: var(--muted); margin-bottom: 14px; }
+    .post ul { color: var(--muted); margin: 0 0 14px 22px; }
+    .post ul li { margin-bottom: 6px; }
+    .back { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; color: var(--accent); text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="logo" href="../index.html">suvo<em>.dev</em></a>
+      <nav class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../services.html">Services</a>
+        <a href="../skills.html">Skills</a>
+        <a href="../work.html">Work</a>
+        <a href="../case-studies.html">Case Studies</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../blog.html" class="active">Blog</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../contact.html" class="btn-hire"><span class="p">$</span>Hire Me<span class="ar">&rarr;</span></a>
+      </nav>
+    </div>
+
+    <div class="page-head">
+      <a class="back" href="../blog.html">&larr; cd ../blog</a>
+      <h1 style="margin-top:16px;">Why I Build Custom Web Apps with PHP and Laravel</h1>
+    </div>
+
+    <main class="page-body">
+      <article class="post">
+        <p class="post-meta"><b>development</b> · Jul 24, 2026 · by Suvo Dev · Sylhet, Bangladesh</p>
+        <p>When a project needs more than a website — logins, a database, an admin panel, business logic that isn't covered by a plugin — I reach for PHP and Laravel by default. Not because it's trendy, but because it consistently gets client projects to production faster and keeps them maintainable afterward.</p>
+
+        <h2>It ships fast without cutting corners</h2>
+        <p>Laravel comes with authentication, routing, database migrations, and form validation already solved and battle-tested. That means less time reinventing basic infrastructure and more time on the actual features a client is paying for — the parts of the app that make it theirs. For small and mid-sized business tools, that speed difference is the gap between a two-week build and a two-month build.</p>
+
+        <h2>It's easy to hand off and maintain</h2>
+        <p>A huge share of hosting worldwide already runs PHP, so deployment is simple and inexpensive, and finding another developer to take over the project later is never a problem. Laravel's project structure is consistent and well-documented, which matters a lot when a client asks for a new feature eight months after launch and I need to remember exactly how the original build was organized — or hand it to someone else entirely.</p>
+
+        <h2>Where it fits best</h2>
+        <ul>
+          <li><b>Client portals</b> — logins, dashboards, and status tracking that replace email and spreadsheets.</li>
+          <li><b>Internal tools</b> — booking systems, inventory trackers, approval workflows built around how a specific business actually operates.</li>
+          <li><b>APIs behind a React or Next.js frontend</b> — a clean Laravel backend serving data to a modern JavaScript interface.</li>
+          <li><b>WooCommerce-adjacent logic</b> — custom features that go beyond what WordPress plugins can reasonably handle.</li>
+        </ul>
+
+        <h2>When I'd reach for something else</h2>
+        <p>If a client just needs a marketing site, a blog, or a store, a custom backend is over-engineering — WordPress, Shopify, or a page builder does the job for less time and less ongoing maintenance. Laravel earns its place when there's real application logic behind the interface, not just content to display.</p>
+        <p>The honest test I apply to every project: would a plugin or a platform solve this reliably? If yes, I use it. If the answer is no — because the workflow is specific to how this one business runs — that's when a custom Laravel build is worth the investment.</p>
+      </article>
+
+      <section style="margin-top:56px; max-width:720px;">
+        <div class="band">
+          <div>
+            <h2>Need something more than a website?</h2>
+            <p>If your business has a workflow no plugin quite fits, let's talk about what a custom build would actually take.</p>
+          </div>
+          <a class="btn-hire" href="../contact.html"><span class="p">$</span>Hire Me<span class="ar">&rarr;</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>&copy; 2026 Suvo Dev &middot; Sylhet, Bangladesh</footer>
+
+  <script src="../js/cursor.js"></script>
+  <script src="../js/protect.js"></script>
+  <script src="../js/site.js"></script>
+</body>
+</html>
